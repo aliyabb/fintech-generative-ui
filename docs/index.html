@@ -1,0 +1,208 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>生成式UI · 金融费率透明化</title><style>:root{--bg:#fbfbfa;--fg:#1a1a18;--muted:#6b6b66;--line:#e4e4e0;--card:#fff;
+ --bad:#c0392b;--good:#1e7a4f;--warn:#b7791f;--accent:#2d5b8e;--code:#f4f4f2}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
+ --bg:#14140f;--fg:#eceae4;--muted:#9a978e;--line:#2e2e28;--card:#1c1c17;
+ --bad:#e8705f;--good:#5fbf8f;--warn:#e0aa4f;--accent:#7aa8d8;--code:#22221c}}
+:root[data-theme=dark]{--bg:#14140f;--fg:#eceae4;--muted:#9a978e;--line:#2e2e28;
+ --card:#1c1c17;--bad:#e8705f;--good:#5fbf8f;--warn:#e0aa4f;--accent:#7aa8d8;--code:#22221c}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);margin:0;
+ font:15px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+.wrap{max-width:940px;margin:0 auto;padding:0 22px 80px}
+header{padding:64px 0 40px;border-bottom:1px solid var(--line)}
+h1{font-size:30px;margin:0 0 10px;letter-spacing:-.4px;font-weight:650}
+.sub{color:var(--muted);font-size:16px;margin:0 0 22px;max-width:640px}
+.tags span{display:inline-block;border:1px solid var(--line);border-radius:20px;
+ padding:3px 12px;font-size:12.5px;color:var(--muted);margin:0 7px 7px 0}
+h2{font-size:20px;margin:52px 0 8px;font-weight:620}
+h3{font-size:16px;margin:30px 0 8px;font-weight:600}
+.lede{color:var(--muted);margin:0 0 20px;font-size:14.5px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:26px 0 8px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:17px 18px}
+.kpi .n{font-size:27px;font-weight:670;letter-spacing:-.6px;font-variant-numeric:tabular-nums}
+.kpi .l{font-size:12.5px;color:var(--muted);margin-top:5px;line-height:1.5}
+.kpi .d{font-size:12px;margin-top:8px;color:var(--muted)}
+.bad{color:var(--bad)}.good{color:var(--good)}.warn{color:var(--warn)}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:560px}
+th,td{border-bottom:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{font-weight:600;color:var(--muted);font-size:12.5px;white-space:nowrap}
+td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.hl td{background:color-mix(in srgb,var(--good) 7%,transparent)}
+.case{background:var(--card);border:1px solid var(--line);border-radius:11px;
+ padding:16px 18px;margin:14px 0}
+.case .q{font-weight:600;margin-bottom:4px}
+.case .meta{font-size:12px;color:var(--muted);margin-bottom:12px}
+.ans{border-left:3px solid var(--line);padding:2px 0 2px 13px;margin:9px 0;font-size:13.5px}
+.ans.a{border-color:var(--bad)}.ans.c{border-color:var(--good)}
+.ans .tag{font-size:11.5px;color:var(--muted);display:block;margin-bottom:3px}
+.note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--warn);
+ border-radius:8px;padding:14px 17px;margin:20px 0;font-size:13.5px}
+code{background:var(--code);padding:1.5px 5px;border-radius:4px;font-size:12.5px;
+ font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+a{color:var(--accent)}
+footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);
+ color:var(--muted);font-size:12.5px}
+.bar{height:7px;background:var(--code);border-radius:4px;overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;border-radius:4px}
+
+.c{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:16px 18px;margin:12px 0}
+.c.fb{border-left:3px solid var(--warn)}
+.ct{font-weight:620;margin-bottom:10px;font-size:14.5px}
+.cd{font-size:13.5px;line-height:1.7}
+.cn{font-size:12px;color:var(--muted);margin-top:11px}
+.cn.warn{color:var(--warn)}
+.fc{display:grid;grid-template-columns:96px 1fr 84px;gap:10px;align-items:center;margin:9px 0}
+.fl{font-size:12.5px;color:var(--muted)}
+.fbar{height:16px;background:var(--code);border-radius:4px;overflow:hidden}
+.fbar i{display:block;height:100%;border-radius:4px}
+.ftot{margin-top:9px;font-size:13.5px;font-variant-numeric:tabular-nums}
+.fv{text-align:right;font-weight:640;font-variant-numeric:tabular-nums;font-size:14px}
+.kv{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.kv span{background:var(--code);border-radius:5px;padding:3px 9px;font-size:12px}
+.sc{overflow-x:auto;max-height:290px;overflow-y:auto}
+.rl{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.rb{background:var(--warn);color:#fff;border-radius:6px;padding:2px 11px;font-weight:700;font-size:14px}
+.rn{font-size:14px;font-weight:600}
+.cf label{display:block;margin:9px 0}
+.cf span{display:block;font-size:12.5px;color:var(--muted);margin-bottom:4px}
+.cf input{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:7px;
+ background:var(--bg);color:var(--fg);font-size:13.5px}
+.picker{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0}
+.picker button{border:1px solid var(--line);background:var(--card);color:var(--fg);
+ border-radius:18px;padding:6px 13px;font-size:12.5px;cursor:pointer;font-family:inherit}
+.picker button[aria-pressed=true]{background:var(--accent);color:#fff;border-color:var(--accent)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:720px){.two{grid-template-columns:1fr}.fc{grid-template-columns:76px 1fr 70px}}
+</style></head><body><div class="wrap">
+<header>
+<h1>生成式 UI：让模型返回界面，而不是段落</h1>
+<p class="sub">金融产品的核心体验问题是"看不懂成本"。而成本本身是结构化的——
+费率、期数、金额、时间。用表格和对比条呈现，比用文字描述更接近事实的形态。</p>
+<div class="tags"><span>生成式UI</span><span>结构化输出</span><span>降级策略</span>
+<span>模型定版式 / 代码填数据</span><span>本地模型</span></div>
+<p class="lede" style="margin-top:16px">
+<a href="https://github.com/aliyabb/fintech-generative-ui/blob/main/docs/PRD_费率透明化界面.md"><strong>→ PRD</strong></a>　·　
+<a href="usertest.html"><strong>→ 用户测试页面</strong></a>（工具就绪，测试尚未执行）</p>
+</header>
+
+<h2>演示</h2>
+<p class="lede">下面是<strong>真实模型输出的录制回放</strong>，不是手写示例。
+原始结构见 <code>results/schemas_v2.json</code>。本地跑 <code>src/serve.py</code> 可实时生成。</p>
+<div class="picker" id="pk"><button data-i="0" aria-pressed=true>12000元分12期，实际成本到底是多少？</button><button data-i="1">给我看一下12000元分12期的还款计划</button><button data-i="2">稳盈90天和智选混合C有什么区别？</button><button data-i="3">智选混合C的风险等级是什么意思？</button><button data-i="4">我想办个分期，成本高吗？</button><button data-i="5">12000元分3期的真实年化是多少？</button><button data-i="6">20000元分24期的还款计划</button><button data-i="7">R4风险等级是什么？</button><button data-i="8">5000元分6期每期还多少钱？</button><button data-i="9">稳盈90天的风险等级和封闭期</button><button data-i="10">12000元分6期，宣传费率和真实年化差多少</button></div>
+<div id="out"></div>
+<div id="meta" class="lede"></div>
+
+<h2>两次契约修改，以及它们各自值多少</h2>
+<p class="lede">同一组 12 个问题、同一模型、同一温度，只改契约设计。改动效果因此可归因。</p>
+<div class="scroll"><table><thead><tr><th>指标</th>
+<th>v1 初版</th><th>v2 序列契约</th><th>v3 局部容错</th></tr></thead><tbody><tr><td>结构有效率</td><td class="num ">58%</td><td class="num ">75%</td><td class="num good">92%</td></tr><tr><td>降级率（回退纯文本） ↓</td><td class="num ">42%</td><td class="num ">25%</td><td class="num good">8%</td></tr><tr><td>部分救回率</td><td class="num ">0%</td><td class="num ">0%</td><td class="num good">8%</td></tr><tr><td>平均组件数</td><td class="num">1.0</td><td class="num">1.67</td><td class="num">1.83</td></tr><tr><td>平均延迟</td><td class="num">13.95s</td><td class="num">7.14s</td><td class="num">7.19s</td></tr></tbody></table></div>
+
+<h3>修改一：从"单个组件"改为"组件序列"</h3>
+<p class="lede">初版要求模型输出一个 JSON 对象。实测模型<strong>倾向于连续输出多个组件</strong>——
+它想组合出一个多层界面（对比条 + 风险卡 + 追问表单）。
+初版用贪婪正则 <code>{.*}</code> 提取，把多个对象连成一段而解析失败。
+这不是模型不听话，是<strong>契约没有表达模型想做的事</strong>。改为序列后，这类输出从失败变成合法结果。</p>
+
+<h3>修改三：局部失败不等于整体失败</h3>
+<p class="lede">v2 仍有 25% 降级。打开失败样本发现三种情况：
+模型组合了 3 个组件、其中 1 个缺一个字段；数组里某个对象写成了
+<code>{"data":"content":...}</code> 这种残缺形式；整个数组少了一个右括号。
+<strong>共同点是：大部分内容其实是好的。</strong></p>
+<p class="lede">初版一遇到任何问题就把整个响应丢掉、退回纯文本——
+把 2 个正确的组件连同 1 个有瑕疵的一起扔了，对用户是更差的结果。
+v3 改为分层容错：整块解析失败就救内部的合法对象，
+单个组件字段不全就丢掉它保留其余，一个合法组件都没有才降级。</p>
+
+<h3>修改二：模型定版式，代码填数据</h3>
+<p class="lede">初版让模型输出还款计划的逐期明细。12~24 行表格把输出撑到 <code>max_tokens</code> 截断，
+JSON 不完整而降级。改为：模型只输出组件类型与表头，<strong>逐期数据由 <code>calc.py</code> 计算后注入</strong>。
+可靠性和正确性同时改善——模型本来也算不对这些数字。</p>
+<div class="note">这条分工后来被写进了<a href="https://github.com/aliyabb/fintech-ai-boundary/blob/main/docs/AI能力边界决策表.md">能力边界决策表</a>第 5 条：
+<strong>这条边界是被失败教出来的，不是设计出来的。</strong></div>
+
+<h2>可靠性：降级是产品的一部分</h2>
+<p class="lede">生成式 UI 的代价是结构可能无效。因此每次生成都过 schema 校验，
+校验失败一律降级为纯文本。<strong>宁可退回文字，不可渲染出错误界面</strong>——
+在金融场景里，一个字段错位的费率表比一段文字危险得多。</p>
+
+<h2>可查找性：一个代码能测的客观指标</h2>
+<p class="lede">"用户是否更看得懂"必须由真人回答。但有一部分是客观可测的：
+同样的信息、两种呈现形式，用户要读过多少内容才能碰到那个关键数字。
+对内容完全一致、只有形式不同的同一组材料，测关键数字是否出现、
+按阅读顺序它前面有多少字、总共多少字。</p>
+<div class="scroll"><table><thead><tr><th>指标</th><th>文字</th><th>生成式 UI</th></tr></thead><tbody><tr><td>关键数字命中率</td><td class="num">100%</td><td class="num">67%</td></tr><tr><td>中位前置字符数 ↓</td><td class="num">66</td><td class="num good">35</td></tr><tr><td>中位总字符数</td><td class="num">120</td><td class="num">67</td></tr></tbody></table></div>
+<div class="note"><strong>更好扫描，但表达力更窄。</strong>
+生成式 UI 把关键数字放在大约一半的位置、一半的篇幅里，更容易扫到；
+但命中率反而低于纯文字。这不是实现缺陷，是<strong>结构化本身的代价</strong>。<br><br>
+第一次测出来，UI 在"手续费一共多少钱"上完全没命中：模型选了 <code>fee_comparison</code>，
+而该组件当时只有费率、没有金额字段——答案根本不在界面上。
+加了必需字段 <code>total_fee</code> 后重跑了全部三个版本（改了校验规则，
+旧数字就不再对应现在的代码，必须重测而不是沿用）。<br><br>
+修好之后漏的变成了另一个问题：<strong>"实际年化是宣传费率的几倍"</strong>。
+组件里有 7.2%、有 13.03%、也有 864 元，但没有 <strong>1.81 倍</strong>——
+它是从两个数推出来的，而组件只显示它有字段的东西。</div>
+<div class="note"><strong>这是生成式 UI 的根本权衡：</strong>
+文字能回答任何问题，组件只能回答它的 schema 预先想到的问题；
+换来的是——想到了的那些问题，答案离用户近一倍。<br><br>
+正确的产品结论不是"再加一个 <code>multiple</code> 字段"，
+那是拿三道测试题去过拟合契约。正确的结论是：
+<strong>覆盖预期问题集合，其余交给文字降级。</strong>
+系统本来就有降级通道，这个测量说明了它为什么必须一直存在。</div>
+<p class="lede"><strong>这不是理解度的替代品</strong>，只是把"信息埋得多深"量化出来。
+真正的理解度仍然标注为未测量。</p>
+
+<h2>用户测试</h2>
+<p class="lede"><strong>6 人跑完了试点，
+而试点最主要的发现被我自己的材料缺陷推翻了。</strong></p>
+<div class="scroll"><table><thead><tr><th>任务</th><th>文字条件</th>
+<th>生成式 UI</th><th>结论</th></tr></thead><tbody><tr><td>相差倍数、手续费总额、提前还款、实际年化</td><td class="num good">6/6</td><td class="num good">6/6</td><td>有效</td></tr><tr><td>风险等级 R4</td><td class="num">0/6</td><td class="num">4/6</td><td class="bad"><strong>无效</strong></td></tr></tbody></table></div>
+<div class="note"><strong>为什么风险等级那一题作废。</strong>
+试点里最显眼的现象是文字条件下 6 人全都答不出"R4 意味着什么"，
+看起来像是"散文容易把非数字信息一笔带过"。<br><br>
+核对材料后发现不是这样——文字条件在这道题上给出的是一句拒答：
+「您咨询的"智选混合 C"不在本行信用卡账单分期业务范围内，<strong>无法提供该理财产品的风险等级信息</strong>」。
+<strong>答案根本不在材料里。</strong><br><br>
+原因在材料生成脚本：文字条件的检索每组只做一次，用一条关于分期的查询取回片段，
+再把同一份上下文喂给全部 5 道题；风险等级问的是理财产品，上下文里没有对应片段，
+模型于是正确地拒答了。而 UI 分支是逐题检索的，拿到了 <code>risk_card</code> 需要的片段。<br><br>
+<strong>两个条件呈现的内容不一致——实验最核心的控制被破坏了。</strong>
+基于这道题的任何比较结论都不成立，包括我此前写下的"结构化不允许信息被省略"。
+<strong>该结论作废。</strong></div>
+<div class="note"><strong>还剩下什么。</strong>
+四道数值题在两个条件下都是 6/6——<strong>没有测出差异</strong>，
+这本身是有效结果：答案是一个数字时，两种形式都够用。<br>
+试点还验证了工具链可用，并且<strong>抓到了一个足以毁掉正式测试的设计缺陷</strong>。
+这正是试点存在的意义。</div>
+<div class="note"><strong>已修与待做。</strong>
+已修：材料生成改为两个条件逐题检索、使用同一条查询。
+已归档：缺陷版材料保留为 <code>results/test_materials_v1_flawed.json</code>，与这 6 份数据对应。
+待做：用修正后的材料重新招募被试——已跑过的 6 人不能复用，他们见过旧材料。<br><br>
+PRD 里理解度三行仍是"未测量"，现在有了更具体的理由：
+<strong>测过一轮，测错了，知道错在哪，也知道怎么重测。</strong></div>
+<div class="note"><strong>这里没有用户数据，因为还没有做用户测试。</strong>
+本项目实测的只有结构有效率与降级率（上表），那是代码可以测的部分。
+"生成式 UI 是否让用户更看得懂"需要真人，方案已写好但尚未执行，
+详见 <a href="https://github.com/aliyabb/fintech-generative-ui/blob/main/docs/用户测试方案.md">用户测试方案</a>。在跑完之前，这里不会出现任何数字。</div>
+
+<footer>模型 qwen/qwen3.5-9b（MLX 8bit，本地）· 演示为录制回放 ·
+本页由 <code>src/build_site.py</code> 从 <code>results/</code> 生成</footer>
+</div>
+<script src="render.js"></script>
+<script>
+fetch("data.json").then(r=>r.json()).then(D=>{
+  const out=document.getElementById("out"), meta=document.getElementById("meta"),
+        pk=document.getElementById("pk");
+  function show(i){
+    renderComponents(D[i].components, out);
+    meta.innerHTML = "组件："+D[i].components.map(c=>"<code>"+c.component+"</code>").join(" + ")
+      + " · 延迟 "+D[i]._latency_s+"s · 依据片段 "+D[i]._contexts.join("/")
+      + (D[i]._calc_injected ? " · 数值由 <code>calc.py</code> 注入" : "");
+    [...pk.children].forEach((b,j)=>b.setAttribute("aria-pressed", j===i));
+  }
+  pk.addEventListener("click", e=>{ const b=e.target.closest("button"); if(b) show(+b.dataset.i); });
+  show(0);
+});
+</script></body></html>

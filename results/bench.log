@@ -1,0 +1,84 @@
+FB  text                                35.5s  12000元分12期，实际成本到底是多少？
+FB  text                                35.6s  12000元分12期，实际成本到底是多少？
+FB  text                                14.9s  给我看一下12000元分12期的还款计划
+FB  text                                17.6s  给我看一下12000元分12期的还款计划
+FB  text                                12.7s  稳盈90天和智选混合C有什么区别？
+FB  text                                 7.4s  稳盈90天和智选混合C有什么区别？
+OK  risk_card                            5.1s  智选混合C的风险等级是什么意思？
+OK  risk_card                            7.8s  智选混合C的风险等级是什么意思？
+OK  risk_card                           11.9s  我想办个分期，成本高吗？
+OK  risk_card                            8.3s  我想办个分期，成本高吗？
+FB  text                                14.8s  12000元分3期的真实年化是多少？
+FB  text                                17.2s  12000元分3期的真实年化是多少？
+FB  text                                39.0s  20000元分24期的还款计划
+FB  text                                27.6s  20000元分24期的还款计划
+OK  product_compare                      8.3s  添利债券A和货币宝的参数对比一下
+OK  product_compare                     10.1s  添利债券A和货币宝的参数对比一下
+OK  risk_card                           16.9s  R4风险等级是什么？
+OK  risk_card                            8.9s  R4风险等级是什么？
+FB  text                                10.6s  5000元分6期每期还多少钱？
+FB  text                                11.5s  5000元分6期每期还多少钱？
+OK  risk_card                           12.2s  稳盈90天的风险等级和封闭期
+OK  risk_card                            6.3s  稳盈90天的风险等级和封闭期
+FB  text                                20.3s  12000元分6期，宣传费率和真实年化差多少？
+FB  text                                19.4s  12000元分6期，宣传费率和真实年化差多少？
+
+ {
+  "样本数": 24,
+  "结构有效数": 10,
+  "结构有效率": 0.4167,
+  "降级率": 0.5833,
+  "截断率": 0.0,
+  "平均延迟_s": 15.83,
+  "平均组件数": 1.0,
+  "组件分布": {
+    "text": 14,
+    "risk_card": 8,
+    "product_compare": 2
+  },
+  "契约版本": "v1"
+}
+FB  text                                17.6s  12000元分12期，实际成本到底是多少？
+FB  text                                13.7s  12000元分12期，实际成本到底是多少？
+FB  text                                 7.2s  给我看一下12000元分12期的还款计划
+FB  text                                 8.6s  给我看一下12000元分12期的还款计划
+OK  product_compare                     17.5s  稳盈90天和智选混合C有什么区别？
+OK  product_compare                     12.6s  稳盈90天和智选混合C有什么区别？
+OK  risk_card                            4.7s  智选混合C的风险等级是什么意思？
+OK  risk_card                            7.1s  智选混合C的风险等级是什么意思？
+FB  text                                17.1s  我想办个分期，成本高吗？
+FB  text                                 7.5s  我想办个分期，成本高吗？
+OK  fee_comparison+repayment_schedule+  12.8s  12000元分3期的真实年化是多少？
+OK  fee_comparison+repayment_schedule+  14.4s  12000元分3期的真实年化是多少？
+OK  repayment_schedule+fee_comparison+  24.1s  20000元分24期的还款计划
+OK  repayment_schedule+fee_comparison+  17.6s  20000元分24期的还款计划
+OK  product_compare                      8.5s  添利债券A和货币宝的参数对比一下
+OK  product_compare                     10.2s  添利债券A和货币宝的参数对比一下
+OK  risk_card                           14.6s  R4风险等级是什么？
+OK  risk_card                            5.2s  R4风险等级是什么？
+OK  fee_comparison+repayment_schedule    6.2s  5000元分6期每期还多少钱？
+OK  fee_comparison+repayment_schedule    7.0s  5000元分6期每期还多少钱？
+OK  risk_card                           13.0s  稳盈90天的风险等级和封闭期
+OK  risk_card                            8.3s  稳盈90天的风险等级和封闭期
+OK  fee_comparison                       4.4s  12000元分6期，宣传费率和真实年化差多少？
+OK  fee_comparison                       7.7s  12000元分6期，宣传费率和真实年化差多少？
+
+ {
+  "样本数": 24,
+  "结构有效数": 18,
+  "结构有效率": 0.75,
+  "降级率": 0.25,
+  "截断率": 0.0,
+  "平均延迟_s": 11.15,
+  "平均组件数": 1.58,
+  "组件分布": {
+    "text": 10,
+    "product_compare": 4,
+    "risk_card": 10,
+    "fee_comparison": 8,
+    "repayment_schedule": 6
+  },
+  "契约版本": "v2"
+}
+docs/index.html + data.json 已生成（9 个演示）
+README 指标区已更新

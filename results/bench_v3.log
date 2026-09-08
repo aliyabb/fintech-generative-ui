@@ -1,0 +1,43 @@
+OK  fee_comparison+repayment_schedule+  22.1s  12000元分12期，实际成本到底是多少？
+OK  fee_comparison+repayment_schedule+  12.8s  12000元分12期，实际成本到底是多少？
+OK  repayment_schedule                   6.9s  给我看一下12000元分12期的还款计划
+OK  repayment_schedule                   8.4s  给我看一下12000元分12期的还款计划
+OK  product_compare                     24.4s  稳盈90天和智选混合C有什么区别？
+OK  product_compare                     11.9s  稳盈90天和智选混合C有什么区别？
+OK  risk_card                            4.3s  智选混合C的风险等级是什么意思？
+OK  risk_card                            6.2s  智选混合C的风险等级是什么意思？
+OK  risk_card                           17.1s  我想办个分期，成本高吗？
+OK  risk_card                            8.6s  我想办个分期，成本高吗？
+OK  fee_comparison+repayment_schedule+  12.7s  12000元分3期的真实年化是多少？
+OK  fee_comparison+repayment_schedule+  15.5s  12000元分3期的真实年化是多少？
+OK  repayment_schedule+fee_comparison+  29.3s  20000元分24期的还款计划
+OK  repayment_schedule+fee_comparison+  17.4s  20000元分24期的还款计划
+OK  product_compare                      8.3s  添利债券A和货币宝的参数对比一下
+OK  product_compare                     10.3s  添利债券A和货币宝的参数对比一下
+OK  risk_card                           10.4s  R4风险等级是什么？
+OK  risk_card                            5.2s  R4风险等级是什么？
+OK  fee_comparison+repayment_schedule    5.9s  5000元分6期每期还多少钱？
+OK  fee_comparison+repayment_schedule    7.1s  5000元分6期每期还多少钱？
+OK  risk_card                           13.2s  稳盈90天的风险等级和封闭期
+OK  risk_card                            6.1s  稳盈90天的风险等级和封闭期
+OK  fee_comparison                       4.4s  12000元分6期，宣传费率和真实年化差多少？
+OK  fee_comparison                       6.4s  12000元分6期，宣传费率和真实年化差多少？
+
+ {
+  "样本数": 24,
+  "结构有效数": 24,
+  "结构有效率": 1.0,
+  "降级率": 0.0,
+  "截断率": 0.0,
+  "部分救回率": 0.0833,
+  "平均延迟_s": 11.45,
+  "平均组件数": 1.75,
+  "组件分布": {
+    "fee_comparison": 10,
+    "repayment_schedule": 10,
+    "product_compare": 6,
+    "risk_card": 12,
+    "text": 4
+  },
+  "契约版本": "v3"
+}

@@ -1,0 +1,976 @@
+[
+  {
+    "variant": "v3",
+    "_dropped_components": [
+      "risk_card 缺少必需字段: ['warning']"
+    ],
+    "question": "12000元分12期，实际成本到底是多少？",
+    "components": [
+      {
+        "component": "fee_comparison",
+        "data": {
+          "title": "分期成本对比",
+          "advertised_label": "名义费率",
+          "advertised_value": "0.72%",
+          "actual_label": "IRR口径实际年化",
+          "actual_value": "13.03%",
+          "total_fee": 864.0,
+          "note": "手续费按全额本金逐期收取，不随剩余本金递减。"
+        }
+      },
+      {
+        "component": "repayment_schedule",
+        "data": {
+          "title": "12期还款计划",
+          "principal": 12000.0,
+          "periods": 12,
+          "per_period": 1072.0,
+          "total": 12864.0
+        }
+      },
+      {
+        "component": "text",
+        "data": {
+          "content": "【产品条款】\n[F003] 分期手续费按分期入账时的本金全额计收，每期收取，不因剩余本金逐期减少而递减。\n[F005] 单笔账单分期金额最低600元，最高50000元。\n[F004] 客户申请提前结清分期的，须一次性支付剩余全部期数的手续费，本行不予减免。"
+        }
+      }
+    ],
+    "_fallback": false,
+    "_error": null,
+    "_latency_s": 11.64,
+    "_calc_injected": true,
+    "_contexts": [
+      "F003",
+      "F005",
+      "F004"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [
+      "risk_card 缺少必需字段: ['warning']"
+    ],
+    "question": "12000元分12期，实际成本到底是多少？",
+    "components": [
+      {
+        "component": "fee_comparison",
+        "data": {
+          "title": "分期成本对比",
+          "advertised_label": "名义费率",
+          "advertised_value": "0.72%",
+          "actual_label": "IRR口径实际年化",
+          "actual_value": "13.03%",
+          "total_fee": 864.0,
+          "note": "手续费按全额本金逐期收取，不随剩余本金递减。"
+        }
+      },
+      {
+        "component": "repayment_schedule",
+        "data": {
+          "title": "12期还款计划",
+          "principal": 12000.0,
+          "periods": 12,
+          "per_period": 1072.0,
+          "total": 12864.0
+        }
+      },
+      {
+        "component": "text",
+        "data": {
+          "content": "【产品条款】\n[F003] 分期手续费按分期入账时的本金全额计收，每期收取，不因剩余本金逐期减少而递减。\n[F005] 单笔账单分期金额最低600元，最高50000元。\n[F004] 客户申请提前结清分期的，须一次性支付剩余全部期数的手续费，本行不予减免。"
+        }
+      }
+    ],
+    "_fallback": false,
+    "_error": null,
+    "_latency_s": 11.52,
+    "_calc_injected": true,
+    "_contexts": [
+      "F003",
+      "F005",
+      "F004"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [],
+    "question": "给我看一下12000元分12期的还款计划",
+    "components": [
+      {
+        "component": "repayment_schedule",
+        "data": {
+          "title": "12000元分12期还款计划",
+          "principal": 12000.0,
+          "periods": 12,
+          "per_period": 1072.0,
+          "total": 12864.0
+        }
+      },
+      {
+        "component": "fee_comparison",
+        "data": {
+          "title": "费率对比",
+          "advertised_label": "名义费率",
+          "advertised_value": "0.72%",
+          "actual_label": "IRR口径真实年化",
+          "actual_value": "13.03%",
+          "total_fee": 864.0,
+          "note": "手续费合计864元，实际年化利率13.03%（IRR口径）"
+        }
+      },
+      {
+        "component": "risk_card",
+        "data": {
+          "title": "风险提示",
+          "level": "中",
+          "level_name": "中",
+          "description": "分期业务涉及实际年化利率13.03%，请根据自身还款能力谨慎申请。",
+          "warning": "未按时归还最低还款额将按5%收取违约金，最低20元。"
+        }
+      },
+      {
+        "component": "text",
+        "data": {
+          "content": "产品条款：\n[F005] 单笔账单分期金额最低600元，最高50000元。\n[F006] 分期申请审核通过后，于T+1个工作日入账，入账后于下一期账单开始计收手续费。\n[F007] 持卡人未按时归还最低还款额的，本行按最低还款额未还部分的5%收取违约金，每笔最低收取20元。"
+        }
+      }
+    ],
+    "_fallback": false,
+    "_error": null,
+    "_latency_s": 12.68,
+    "_calc_injected": true,
+    "_contexts": [
+      "F007",
+      "F005",
+      "F006"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [],
+    "question": "给我看一下12000元分12期的还款计划",
+    "components": [
+      {
+        "component": "repayment_schedule",
+        "data": {
+          "title": "12000元分12期还款计划",
+          "principal": 12000.0,
+          "periods": 12,
+          "per_period": 1072.0,
+          "total": 12864.0
+        }
+      },
+      {
+        "component": "fee_comparison",
+        "data": {
+          "title": "费率对比",
+          "advertised_label": "名义费率",
+          "advertised_value": "0.72%",
+          "actual_label": "IRR口径真实年化",
+          "actual_value": "13.03%",
+          "total_fee": 864.0,
+          "note": "手续费合计864元，实际年化利率13.03%（IRR口径）"
+        }
+      },
+      {
+        "component": "risk_card",
+        "data": {
+          "title": "风险提示",
+          "level": "中",
+          "level_name": "中",
+          "description": "分期业务涉及实际年化利率13.03%，请根据自身还款能力谨慎申请。",
+          "warning": "未按时归还最低还款额将按5%收取违约金，最低20元。"
+        }
+      },
+      {
+        "component": "text",
+        "data": {
+          "content": "产品条款：\n[F005] 单笔账单分期金额最低600元，最高50000元。\n[F006] 分期申请审核通过后，于T+1个工作日入账，入账后于下一期账单开始计收手续费。\n[F007] 持卡人未按时归还最低还款额的，本行按最低还款额未还部分的5%收取违约金，每笔最低收取20元。"
+        }
+      }
+    ],
+    "_fallback": false,
+    "_error": null,
+    "_latency_s": 12.47,
+    "_calc_injected": true,
+    "_contexts": [
+      "F007",
+      "F005",
+      "F006"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [],
+    "question": "稳盈90天和智选混合C有什么区别？",
+    "components": [
+      {
+        "component": "product_compare",
+        "data": {
+          "title": "智选混合C 产品参数对比",
+          "columns": [
+            "项目",
+            "智选混合C"
+          ],
+          "rows": [
+            [
+              "风险等级",
+              "R4（进取型）"
+            ],
+            [
+              "起投金额",
+              "100元"
+            ],
+            [
+              "申购费",
+              "0%"
+            ],
+            [
+              "销售服务费",
+              "0.40%/年"
+            ],
+            [
+              "赎回费率",
+              "持有<7天:1.50%; 满7天:0%"
+            ],
+            [
+              "管理费",
+              "0.50%/年 (2025年6月1日起)"
+            ]
+          ],
+          "disclaimer": "本表仅展示客观参数，不构成投资建议。"
+        }
+      }
+    ],
+    "_fallback": false,
+    "_error": null,
+    "_latency_s": 5.61,
+    "_calc_injected": false,
+    "_contexts": [
+      "F014",
+      "F017",
+      "F018"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [],
+    "question": "稳盈90天和智选混合C有什么区别？",
+    "components": [
+      {
+        "component": "product_compare",
+        "data": {
+          "title": "智选混合C 产品参数对比",
+          "columns": [
+            "项目",
+            "智选混合C"
+          ],
+          "rows": [
+            [
+              "风险等级",
+              "R4（进取型）"
+            ],
+            [
+              "起投金额",
+              "100元"
+            ],
+            [
+              "申购费",
+              "0%"
+            ],
+            [
+              "销售服务费",
+              "0.40%/年"
+            ],
+            [
+              "赎回费率",
+              "持有<7天:1.50%; 满7天:0%"
+            ],
+            [
+              "管理费",
+              "0.50%/年 (2025年6月1日起)"
+            ]
+          ],
+          "disclaimer": "本表仅展示客观参数，不构成投资建议。"
+        }
+      }
+    ],
+    "_fallback": false,
+    "_error": null,
+    "_latency_s": 5.72,
+    "_calc_injected": false,
+    "_contexts": [
+      "F014",
+      "F017",
+      "F018"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [],
+    "question": "智选混合C的风险等级是什么意思？",
+    "components": [
+      {
+        "component": "risk_card",
+        "data": {
+          "title": "智选混合C 风险等级说明",
+          "level": "R4",
+          "level_name": "进取型",
+          "description": "该基金属于进取型产品，预期风险与收益较高，适合具有一定风险承受能力、追求较高收益的投资者。",
+          "warning": "投资有风险，入市需谨慎。"
+        }
+      }
+    ],
+    "_fallback": false,
+    "_error": null,
+    "_latency_s": 3.6,
+    "_calc_injected": false,
+    "_contexts": [
+      "F014",
+      "F017",
+      "F018"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [],
+    "question": "智选混合C的风险等级是什么意思？",
+    "components": [
+      {
+        "component": "risk_card",
+        "data": {
+          "title": "智选混合C 风险等级说明",
+          "level": "R4",
+          "level_name": "进取型",
+          "description": "该基金属于进取型产品，预期风险与收益较高，适合具有一定风险承受能力、追求较高收益的投资者。",
+          "warning": "投资有风险，入市需谨慎。"
+        }
+      }
+    ],
+    "_fallback": false,
+    "_error": null,
+    "_latency_s": 3.58,
+    "_calc_injected": false,
+    "_contexts": [
+      "F014",
+      "F017",
+      "F018"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [],
+    "question": "我想办个分期，成本高吗？",
+    "components": [
+      {
+        "component": "risk_card",
+        "data": {
+          "title": "分期成本风险提示",
+          "level": "高",
+          "level_name": "高风险",
+          "description": "分期手续费按入账本金全额计收，不因剩余本金减少而递减。提前结清需一次性支付剩余全部期数手续费，总成本不降低。",
+          "warning": "手续费率之和不等于实际年化利率，请谨慎评估真实成本。"
+        }
+      }
+    ],
+    "_fallback": false,
+    "_error": null,
+    "_latency_s": 5.35,
+    "_calc_injected": false,
+    "_contexts": [
+      "F004",
+      "F005",
+      "F003"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [],
+    "question": "我想办个分期，成本高吗？",
+    "components": [
+      {
+        "component": "risk_card",
+        "data": {
+          "title": "分期成本风险提示",
+          "level": "高",
+          "level_name": "高风险",
+          "description": "分期手续费按入账本金全额计收，不因剩余本金减少而递减。提前结清需一次性支付剩余全部期数手续费，总成本不降低。",
+          "warning": "手续费率之和不等于实际年化利率，请谨慎评估真实成本。"
+        }
+      }
+    ],
+    "_fallback": false,
+    "_error": null,
+    "_latency_s": 5.38,
+    "_calc_injected": false,
+    "_contexts": [
+      "F004",
+      "F005",
+      "F003"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [],
+    "question": "12000元分3期的真实年化是多少？",
+    "components": [
+      {
+        "component": "fee_comparison",
+        "data": {
+          "title": "分期费率对比",
+          "advertised_label": "名义费率之和",
+          "advertised_value": "1.65%",
+          "actual_label": "IRR口径实际年化",
+          "actual_value": "9.87%",
+          "total_fee": 198.0,
+          "note": "手续费按全额本金计收，不随剩余本金递减。"
+        }
+      }
+    ],
+    "_fallback": false,
+    "_error": null,
+    "_latency_s": 4.09,
+    "_calc_injected": true,
+    "_contexts": [
+      "F003",
+      "F005",
+      "F009"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [],
+    "question": "12000元分3期的真实年化是多少？",
+    "components": [
+      {
+        "component": "fee_comparison",
+        "data": {
+          "title": "分期费率对比",
+          "advertised_label": "名义费率之和",
+          "advertised_value": "1.65%",
+          "actual_label": "IRR口径实际年化",
+          "actual_value": "9.87%",
+          "total_fee": 198.0,
+          "note": "手续费按全额本金计收，不随剩余本金递减。"
+        }
+      }
+    ],
+    "_fallback": false,
+    "_error": null,
+    "_latency_s": 3.96,
+    "_calc_injected": true,
+    "_contexts": [
+      "F003",
+      "F005",
+      "F009"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [],
+    "question": "20000元分24期的还款计划",
+    "components": [
+      {
+        "component": "repayment_schedule",
+        "data": {
+          "title": "20000元分24期还款计划",
+          "principal": 20000.0,
+          "periods": 24,
+          "per_period": 957.33,
+          "total": 22976.0
+        }
+      },
+      {
+        "component": "fee_comparison",
+        "data": {
+          "title": "费率对比",
+          "advertised_label": "宣传费率",
+          "advertised_value": "0.62%/期",
+          "actual_label": "IRR口径真实年化",
+          "actual_value": "13.69%",
+          "total_fee": 2976.0,
+          "note": "手续费合计2976元，实际年化利率13.69%"
+        }
+      },
+      {
+        "component": "risk_card",
+        "data": {
+          "title": "风险提示",
+          "level": "中",
+          "level_name": "中风险",
+          "description": "分期业务涉及额外手续费及违约金风险，请按时还款。",
+          "warning": "未按时归还最低还款额将按5%收取违约金，最低20元。"
+        }
+      }
+    ],
+    "_fallback": false,
+    "_error": null,
+    "_latency_s": 8.37,
+    "_calc_injected": true,
+    "_contexts": [
+      "F007",
+      "F005",
+      "F002"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [],
+    "question": "20000元分24期的还款计划",
+    "components": [
+      {
+        "component": "repayment_schedule",
+        "data": {
+          "title": "20000元分24期还款计划",
+          "principal": 20000.0,
+          "periods": 24,
+          "per_period": 957.33,
+          "total": 22976.0
+        }
+      },
+      {
+        "component": "fee_comparison",
+        "data": {
+          "title": "费率对比",
+          "advertised_label": "宣传费率",
+          "advertised_value": "0.62%/期",
+          "actual_label": "IRR口径真实年化",
+          "actual_value": "13.69%",
+          "total_fee": 2976.0,
+          "note": "手续费合计2976元，实际年化利率13.69%"
+        }
+      },
+      {
+        "component": "risk_card",
+        "data": {
+          "title": "风险提示",
+          "level": "中",
+          "level_name": "中风险",
+          "description": "分期业务涉及额外手续费及违约金风险，请按时还款。",
+          "warning": "未按时归还最低还款额将按5%收取违约金，最低20元。"
+        }
+      }
+    ],
+    "_fallback": false,
+    "_error": null,
+    "_latency_s": 8.44,
+    "_calc_injected": true,
+    "_contexts": [
+      "F007",
+      "F005",
+      "F002"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [],
+    "question": "添利债券A和货币宝的参数对比一下",
+    "components": [
+      {
+        "component": "text",
+        "data": {
+          "content": "[{\"component\":\"product_compare\",\"data\":{\"title\":\"添利债券A vs 货币宝 参数对比\",\"columns\":[\"产品名称\",\"风险等级\",\"起投金额\",\"赎回费率\",\"赎回时效\",\"业绩基准说明\"],\"rows\":[[\"添利债券A\",\"R2\",\"未披露\",\"持有<7天:1.50%\",\"未披露\",\"参考值，不保本\"],\"[\"货币宝\",\"R1\",\"1元\",\"未披露\",\"快赎T+0(限1万)/普赎T+1\",\"参考值，不保本\"]],\"disclaimer\":\"本表仅展示客观参数，不构成投资建议。\"}}]"
+        }
+      }
+    ],
+    "_fallback": true,
+    "_error": "响应中未找到可解析的 JSON",
+    "_latency_s": 5.2,
+    "_calc_injected": false,
+    "_contexts": [
+      "F013",
+      "F012",
+      "F016"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [],
+    "question": "添利债券A和货币宝的参数对比一下",
+    "components": [
+      {
+        "component": "text",
+        "data": {
+          "content": "[{\"component\":\"product_compare\",\"data\":{\"title\":\"添利债券A vs 货币宝 参数对比\",\"columns\":[\"产品名称\",\"风险等级\",\"起投金额\",\"赎回费率\",\"赎回时效\",\"业绩基准说明\"],\"rows\":[[\"添利债券A\",\"R2\",\"未披露\",\"持有<7天:1.50%\",\"未披露\",\"参考值，不保本\"],\"[\"货币宝\",\"R1\",\"1元\",\"未披露\",\"快赎T+0(限1万)/普赎T+1\",\"参考值，不保本\"]],\"disclaimer\":\"本表仅展示客观参数，不构成投资建议。\"}}]"
+        }
+      }
+    ],
+    "_fallback": true,
+    "_error": "响应中未找到可解析的 JSON",
+    "_latency_s": 5.17,
+    "_calc_injected": false,
+    "_contexts": [
+      "F013",
+      "F012",
+      "F016"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [],
+    "question": "R4风险等级是什么？",
+    "components": [
+      {
+        "component": "risk_card",
+        "data": {
+          "title": "产品风险等级",
+          "level": "R4",
+          "level_name": "进取型",
+          "description": "R4及以上产品本金可能发生较大亏损。",
+          "warning": "向投资者销售R3及以上风险等级产品前，须完成风险揭示并留存记录。"
+        }
+      }
+    ],
+    "_fallback": false,
+    "_error": null,
+    "_latency_s": 2.57,
+    "_calc_injected": false,
+    "_contexts": [
+      "F015",
+      "F014",
+      "F028"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [],
+    "question": "R4风险等级是什么？",
+    "components": [
+      {
+        "component": "risk_card",
+        "data": {
+          "title": "产品风险等级",
+          "level": "R4",
+          "level_name": "进取型",
+          "description": "R4及以上产品本金可能发生较大亏损。",
+          "warning": "向投资者销售R3及以上风险等级产品前，须完成风险揭示并留存记录。"
+        }
+      }
+    ],
+    "_fallback": false,
+    "_error": null,
+    "_latency_s": 2.56,
+    "_calc_injected": false,
+    "_contexts": [
+      "F015",
+      "F014",
+      "F028"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [],
+    "question": "5000元分6期每期还多少钱？",
+    "components": [
+      {
+        "component": "repayment_schedule",
+        "data": {
+          "title": "5000元分6期还款计划",
+          "principal": 5000.0,
+          "periods": 6,
+          "per_period": 862.33,
+          "total": 5174.0
+        }
+      },
+      {
+        "component": "fee_comparison",
+        "data": {
+          "title": "费率对比",
+          "advertised_label": "宣传费率",
+          "advertised_value": "0.58%",
+          "actual_label": "IRR口径真实年化",
+          "actual_value": "11.83%",
+          "total_fee": 174.0,
+          "note": "手续费合计174元，实际年化利率11.83%"
+        }
+      },
+      {
+        "component": "risk_card",
+        "data": {
+          "title": "风险提示",
+          "level": "中",
+          "level_name": "中",
+          "description": "信用卡分期涉及手续费及实际年化利率，请根据自身还款能力选择。",
+          "warning": "实际年化利率高于宣传费率，请仔细阅读条款。"
+        }
+      },
+      {
+        "component": "product_compare",
+        "data": {
+          "title": "产品条款对比",
+          "columns": [
+            "期数",
+            "旧标准费率",
+            "新标准费率",
+            "最低金额",
+            "最高金额"
+          ],
+          "rows": [
+            [
+              "3期",
+              "0.70%",
+              "0.55%",
+              "600元",
+              "50000元"
+            ],
+            [
+              "6期",
+              "0.72%",
+              "0.58%",
+              "600元",
+              "50000元"
+            ],
+            [
+              "12期",
+              "0.75%",
+              "0.60%",
+              "600元",
+              "50000元"
+            ],
+            [
+              "24期",
+              "0.78%",
+              "0.62%",
+              "600元",
+              "50000元"
+            ]
+          ],
+          "disclaimer": "本表仅展示客观参数，不构成投资建议。"
+        }
+      }
+    ],
+    "_fallback": false,
+    "_error": null,
+    "_latency_s": 13.97,
+    "_calc_injected": true,
+    "_contexts": [
+      "F001",
+      "F002",
+      "F005"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [],
+    "question": "5000元分6期每期还多少钱？",
+    "components": [
+      {
+        "component": "repayment_schedule",
+        "data": {
+          "title": "5000元分6期还款计划",
+          "principal": 5000.0,
+          "periods": 6,
+          "per_period": 862.33,
+          "total": 5174.0
+        }
+      },
+      {
+        "component": "fee_comparison",
+        "data": {
+          "title": "费率对比",
+          "advertised_label": "宣传费率",
+          "advertised_value": "0.58%",
+          "actual_label": "IRR口径真实年化",
+          "actual_value": "11.83%",
+          "total_fee": 174.0,
+          "note": "手续费合计174元，实际年化利率11.83%"
+        }
+      },
+      {
+        "component": "risk_card",
+        "data": {
+          "title": "风险提示",
+          "level": "中",
+          "level_name": "中",
+          "description": "信用卡分期涉及手续费及实际年化利率，请根据自身还款能力选择。",
+          "warning": "实际年化利率高于宣传费率，请仔细阅读条款。"
+        }
+      },
+      {
+        "component": "product_compare",
+        "data": {
+          "title": "产品条款对比",
+          "columns": [
+            "期数",
+            "旧标准费率",
+            "新标准费率",
+            "最低金额",
+            "最高金额"
+          ],
+          "rows": [
+            [
+              "3期",
+              "0.70%",
+              "0.55%",
+              "600元",
+              "50000元"
+            ],
+            [
+              "6期",
+              "0.72%",
+              "0.58%",
+              "600元",
+              "50000元"
+            ],
+            [
+              "12期",
+              "0.75%",
+              "0.60%",
+              "600元",
+              "50000元"
+            ],
+            [
+              "24期",
+              "0.78%",
+              "0.62%",
+              "600元",
+              "50000元"
+            ]
+          ],
+          "disclaimer": "本表仅展示客观参数，不构成投资建议。"
+        }
+      }
+    ],
+    "_fallback": false,
+    "_error": null,
+    "_latency_s": 14.06,
+    "_calc_injected": true,
+    "_contexts": [
+      "F001",
+      "F002",
+      "F005"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [],
+    "question": "稳盈90天的风险等级和封闭期",
+    "components": [
+      {
+        "component": "risk_card",
+        "data": {
+          "title": "稳盈90天风险等级",
+          "level": "R2",
+          "level_name": "稳健型",
+          "description": "适合风险承受能力中等的投资者，本金亏损可能性较低。",
+          "warning": "R4及以上产品本金可能发生较大亏损。"
+        }
+      }
+    ],
+    "_fallback": false,
+    "_error": null,
+    "_latency_s": 9.99,
+    "_calc_injected": false,
+    "_contexts": [
+      "F010",
+      "F011",
+      "F015"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [],
+    "question": "稳盈90天的风险等级和封闭期",
+    "components": [
+      {
+        "component": "risk_card",
+        "data": {
+          "title": "稳盈90天风险等级",
+          "level": "R2",
+          "level_name": "稳健型",
+          "description": "适合风险承受能力中等的投资者，本金亏损可能性较低。",
+          "warning": "R4及以上产品本金可能发生较大亏损。"
+        }
+      }
+    ],
+    "_fallback": false,
+    "_error": null,
+    "_latency_s": 5.63,
+    "_calc_injected": false,
+    "_contexts": [
+      "F010",
+      "F011",
+      "F015"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [],
+    "question": "12000元分6期，宣传费率和真实年化差多少？",
+    "components": [
+      {
+        "component": "fee_comparison",
+        "data": {
+          "title": "分期成本对比",
+          "advertised_label": "名义费率之和",
+          "advertised_value": "3.48%",
+          "actual_label": "IRR口径实际年化",
+          "actual_value": "11.83%",
+          "total_fee": 417.6,
+          "note": "手续费按全额本金逐期收取，不因剩余本金递减。"
+        }
+      }
+    ],
+    "_fallback": false,
+    "_error": null,
+    "_latency_s": 4.51,
+    "_calc_injected": true,
+    "_contexts": [
+      "F003",
+      "F009",
+      "F030"
+    ],
+    "_truncated": false
+  },
+  {
+    "variant": "v3",
+    "_dropped_components": [],
+    "question": "12000元分6期，宣传费率和真实年化差多少？",
+    "components": [
+      {
+        "component": "fee_comparison",
+        "data": {
+          "title": "分期成本对比",
+          "advertised_label": "名义费率之和",
+          "advertised_value": "3.48%",
+          "actual_label": "IRR口径实际年化",
+          "actual_value": "11.83%",
+          "total_fee": 417.6,
+          "note": "手续费按全额本金逐期收取，不因剩余本金递减。"
+        }
+      }
+    ],
+    "_fallback": false,
+    "_error": null,
+    "_latency_s": 6.51,
+    "_calc_injected": true,
+    "_contexts": [
+      "F003",
+      "F009",
+      "F030"
+    ],
+    "_truncated": false
+  }
+]

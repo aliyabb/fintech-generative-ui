@@ -1,0 +1,19 @@
+{
+ "pid": "P2",
+ "started": "2026-09-08T20:50:48.889Z",
+ "plan": [{"mode":"ui","set":"A"},{"mode":"text","set":"B"}],
+ "block": 2, "task": 5,
+ "answers": [
+  {"block":0,"mode":"ui","set":"A","task":"apr","question":"这笔分期的实际年化利率（IRR口径）是多少？","answer":"13.03%","confidence":5,"seconds":613.4},
+  {"block":0,"mode":"ui","set":"A","task":"fee","question":"手续费一共要付多少钱？","answer":"864","confidence":5,"seconds":10.8},
+  {"block":0,"mode":"ui","set":"A","task":"ratio","question":"宣传的费率合计和实际年化差几倍？","answer":"1.81倍","confidence":5,"seconds":12},
+  {"block":0,"mode":"ui","set":"A","task":"early","question":"提前还款能省下手续费吗？","answer":"不能","confidence":5,"seconds":12.4},
+  {"block":0,"mode":"ui","set":"A","task":"risk","question":"智选混合C是什么风险等级，意味着什么？","answer":"R4 (进取型)","confidence":5,"seconds":13.9},
+  {"block":1,"mode":"text","set":"B","task":"apr","question":"这笔分期的实际年化利率（IRR口径）是多少？","answer":"11.83%","confidence":5,"seconds":13.2},
+  {"block":1,"mode":"text","set":"B","task":"fee","question":"手续费一共要付多少钱？","answer":"696","confidence":5,"seconds":10.7},
+  {"block":1,"mode":"text","set":"B","task":"ratio","question":"宣传的费率合计和实际年化差几倍？","answer":"3.4倍","confidence":5,"seconds":13.4},
+  {"block":1,"mode":"text","set":"B","task":"early","question":"提前还款能省下手续费吗？","answer":"不能","confidence":5,"seconds":11.3},
+  {"block":1,"mode":"text","set":"B","task":"risk","question":"智选混合C是什么风险等级，意味着什么？","answer":"不确定","confidence":1,"seconds":12}
+ ],
+ "finished": "2026-09-08T21:02:55.148Z"
+}

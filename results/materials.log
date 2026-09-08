@@ -1,0 +1,22 @@
+  [A/apr] text 4.59s
+  [A/apr] ui   4.34s ['fee_comparison']
+  [A/fee] text 4.57s
+  [A/fee] ui   6.52s ['fee_comparison', 'repayment_schedule']
+  [A/ratio] text 4.12s
+  [A/ratio] ui   4.15s ['fee_comparison']
+  [A/early] text 3.62s
+  [A/early] ui   14.08s ['risk_card', 'fee_comparison', 'product_compare', 'text']
+  [A/risk] text 4.42s
+  [A/risk] ui   3.58s ['risk_card']
+  [B/apr] text 4.74s
+  [B/apr] ui   4.07s ['fee_comparison']
+  [B/fee] text 4.54s
+  [B/fee] ui   4.34s ['fee_comparison']
+  [B/ratio] text 3.68s
+  [B/ratio] ui   4.16s ['fee_comparison']
+  [B/early] text 3.5s
+  [B/early] ui   8.6s ['risk_card', 'fee_comparison', 'repayment_schedule']
+  [B/risk] text 4.35s
+  [B/risk] ui   3.47s ['risk_card']
+
+已生成 docs/test_materials.json（2 组 × 5 任务 × 2 形式）
